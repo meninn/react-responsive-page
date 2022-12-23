@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+
+.news-container {
+  max-width: 100vw;
+
+  cursor: pointer;
+
+  @include breakpoint(md) {
+    width: 40rem;
+    height: auto;
+  }
+
+  &:hover {
+    p {
+      text-decoration: underline;
+    }
+  }
+  p {
+    max-width: 80vw;
+    font: var(--open-sans);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--dark-cerulean);
+    margin-top: 0.9rem;
+    margin-bottom: 0.8rem;
+
+    @include breakpoint(md) {
+      font-size: 2rem;
+    }
+  }
+
+  .tag {
+    font: var(--open-sans);
+    font-size: 0.83rem;
+    font-weight: normal;
+    margin-top: 1.2rem;
+  }
+
+  .tag-1 {
+    max-width: 5.5rem;
+    text-align: center;
+    background-color: var(--dark-cerulean);
+    color: var(--white);
+  }
+
+  .tag-2 {
+    max-width: 3.5rem;
+    text-align: center;
+    background-color: var(--caribbean-green);
+    color: var(--charcoal);
+  }
+
+  .date {
+    font: var(--open-sans);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--dark-silver);
+    margin-bottom: 0.9rem;
+  }
+
+  img {
+    max-width: 75vw;
+  }
+}

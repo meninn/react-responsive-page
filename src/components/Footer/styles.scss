@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+footer {
+  width: 100vw;
+  height: 7.25rem;
+
+  background-color: var(--cultured);
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 29px 32px;
+
+  a {
+    &:hover {
+      svg path {
+        fill: var(--vivid-cerise);
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 24px 55px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

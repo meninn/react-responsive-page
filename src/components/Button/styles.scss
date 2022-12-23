@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease all;
+  cursor: pointer;
+
+  width: 14rem;
+  height: 2.5rem;
+
+  border: 0;
+  border-radius: 25px;
+
+  margin-top: 1.5rem;
+
+  font: var(--open-sans);
+  font-style: normal;
+  font-size: 1.125rem;
+
+  &__text {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    background: var(--tiffany-blue);
+    color: var(--white);
+
+    svg path {
+      fill: var(--white);
+    }
+  }
+}
+
+.btn-1 {
+  background: var(--vivid-cerise);
+  color: var(--white);
+}
+
+.btn-2 {
+  background: var(--white);
+  color: var(--vivid-cerise);
+
+  svg path {
+    fill: var(--vivid-cerise);
+  }
+}

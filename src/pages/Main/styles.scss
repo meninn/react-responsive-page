@@ -1,0 +1,156 @@
+@import "../../styles/variables.scss";
+
+.first-section {
+  width: 100vw;
+  height: 100vh;
+
+  background: url("../../images/png/background.png") 0% 0% no-repeat padding-box;
+
+  padding: 29px 32px;
+
+  background-position: 70%;
+  background-size: cover;
+
+  @include breakpoint(md) {
+    background-position: center;
+    padding: 24px 55px;
+  }
+
+  p {
+    max-width: clamp(19.2rem, 56rem, 60rem);
+    max-height: auto;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white);
+
+    margin-top: 283px;
+
+    @include breakpoint(md) {
+      font-size: 5rem;
+      // margin-top: 396px;
+    }
+  }
+}
+
+.second-section {
+  width: 100vw;
+  min-height: 26rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  background-color: var(--dark-cerulean);
+
+  padding: 29px 32px;
+
+  @include breakpoint(md) {
+    padding: 24px 55px;
+    padding-bottom: 3.625rem;
+  }
+
+  h1 {
+    max-width: clamp(19.2rem, 46.7rem, 50rem);
+    max-height: auto;
+
+    font: var(--open-sans);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+
+    margin-top: 2.5rem;
+
+    @include breakpoint(md) {
+      font-size: 3.625rem;
+      margin-top: 2.5rem;
+    }
+  }
+
+  p {
+    max-width: clamp(19.2rem, 46.7rem, 50rem);
+    max-height: auto;
+
+    font: var(--open-sans);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--white);
+
+    // margin-top: 0.7rem;
+    // margin-bottom: 1rem;
+
+    @include breakpoint(md) {
+      font-size: 1.25rem;
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+.third-section {
+  width: 100vw;
+  height: auto;
+
+  padding: 29px 32px;
+
+  border-bottom: 1px solid #e6e6e6;
+
+  @include breakpoint(md) {
+    padding: 24px 55px;
+  }
+
+  h1 {
+    font: var(--open-sans);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--vivid-cerise);
+
+    @include breakpoint(md) {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(lg) {
+      display: flex;
+      flex-flow: column wrap;
+      max-height: 1100px;
+      overflow: auto;
+      align-content: flex-start;
+      gap: 0 2.4rem;
+    }
+  }
+}
+
+.fourth-section {
+  width: 100vw;
+  height: auto;
+
+  padding: 29px 32px;
+
+  @include breakpoint(md) {
+    padding: 24px 55px;
+  }
+
+  h1 {
+    font: var(--open-sans);
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--vivid-cerise);
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(md) {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

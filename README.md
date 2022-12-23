@@ -1,5 +1,5 @@
 # Run app
-## Inside ftt-app use the following commands:
+## Inside the app use the following commands:
 + yarn
 + yarn dev
 

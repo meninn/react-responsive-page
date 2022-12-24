@@ -1,10 +1,10 @@
-import "./styles/global.scss";
+import './styles/global.scss';
 
-import Main from "./pages/Main";
+import Main from './pages/Main';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className='App'>
       <Main />
     </div>
   );

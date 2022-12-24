@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import Logoipsum from "../../images/svg/Logoipsum";
-import MenuOpenIcon from "../../images/svg/MenuOpenIcon";
-import MenuCloseIcon from "../../images/svg/MenuCloseIcon";
+import Logoipsum from '../../images/svg/Logoipsum';
+import MenuOpenIcon from '../../images/svg/MenuOpenIcon';
+import MenuCloseIcon from '../../images/svg/MenuCloseIcon';
 
-import HeaderInterface from "../../interfaces/HeaderInterface";
+import HeaderInterface from '../../interfaces/HeaderInterface';
 
-import "./styles.scss";
+import './styles.scss';
 
-function Header() {
+function Header(): JSX.Element {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [size, setSize] = useState<HeaderInterface>({
     width: undefined,
@@ -16,15 +16,15 @@ function Header() {
   });
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       setSize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -33,24 +33,18 @@ function Header() {
     }
   }, [size.width, menuIsOpen]);
 
-  const menuToggleHandler = () => {
+  const menuToggleHandler = (): void => {
     setMenuIsOpen((p) => !p);
   };
 
   return (
-    <header className="header">
-      <div className="content">
-        <Logoipsum
-          width="149.465"
-          height="30"
-          fill={menuIsOpen ? "#004875" : "#FFFFFF"}
-        />
+    <header className='header'>
+      <div className='content'>
+        <Logoipsum width='149.465' height='30' fill={menuIsOpen ? '#004875' : '#FFFFFF'} />
 
         <nav
           className={`navbar ${
-            menuIsOpen && size.width !== undefined && size.width < 768
-              ? "isMenu"
-              : ""
+            menuIsOpen && size.width !== undefined && size.width < 768 ? 'isMenu' : ''
           }`}
         >
           <ul>
@@ -61,14 +55,14 @@ function Header() {
             <li>Nascetur</li>
           </ul>
         </nav>
-        <div className="toggle">
+        <div className='toggle'>
           {!menuIsOpen ? (
             <div onClick={menuToggleHandler}>
-              <MenuOpenIcon width="24" height="24" />
+              <MenuOpenIcon width='24' height='24' />
             </div>
           ) : (
             <div onClick={menuToggleHandler}>
-              <MenuCloseIcon width="19.69" height="19.69" />
+              <MenuCloseIcon width='19.69' height='19.69' />
             </div>
           )}
         </div>

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import CardInterface from "../../interfaces/CardInterface";
+import CardInterface from '../../interfaces/CardInterface';
 
-import "./styles.scss";
+import './styles.scss';
 
-function Card({ header, text, img }: CardInterface) {
+function Card({ header, text, img }: CardInterface): JSX.Element {
   return (
-    <div className="card">
+    <div className='card'>
       <div>
         <h1>{header}</h1>
         <p>{text}</p>

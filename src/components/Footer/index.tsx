@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import Logoipsum from "../../images/svg/Logoipsum";
-import ScrollUp from "../../images/svg/ScrollUp";
+import Logoipsum from '../../images/svg/Logoipsum';
+import ScrollUp from '../../images/svg/ScrollUp';
 
-import "./styles.scss";
+import './styles.scss';
 
-function Footer() {
+function Footer(): JSX.Element {
   return (
     <footer>
-      <Logoipsum width="149.465" height="30" fill="#004875" />
-      <a href="#first" className="back-to-top">
+      <Logoipsum width='149.465' height='30' fill='#004875' />
+      <a href='#first' className='back-to-top'>
         <ScrollUp />
       </a>
     </footer>
